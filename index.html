@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>vue-smart-button</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+</head>
+<style>
+
+
+    body, html {
+
+    }
+
+    #app {
+
+    }
+</style>
+<body>
+<div id="app">
+    <vue-smart-button >
+        <div slot="down">down</div>
+        <div slot="up">up</div>
+    </vue-smart-button>
+</div>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="dist/vue-smart-button.js"></script>
+<script>
+    new Vue({
+        el: '#app', data: {},
+        mounted: function () {
+
+        },
+        methods: {},
+        components: {
+            VueSmartButton: VueSmartButton
+        }
+    })
+</script>
+</body>
+</html>
