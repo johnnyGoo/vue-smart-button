@@ -1,8 +1,11 @@
 <template>
     <div @touchstart="touchstart" @touchend="touchend" style="user-select: none">
-        <slot v-if="down" name="down"></slot>
-        <slot v-if="!down" name="up"></slot>
-
+        <div v-if="down" style="position: relative">
+            <slot  name="down"></slot>
+        </div>
+        <div v-if="!down" style="position: relative">
+            <slot  name="up"></slot>
+        </div>
     </div>
 </template>
 <style scoped>
