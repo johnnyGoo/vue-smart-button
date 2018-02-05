@@ -1,14 +1,20 @@
 <template>
     <div @touchstart="touchstart" @touchend="touchend" style="user-select: none">
-        <div v-show="down" style="position: relative">
-            <slot  name="down"></slot>
+        <div v-show="down" class="btn_div">
+            <slot name="down"></slot>
         </div>
-        <div v-show="!down" style="position: relative">
-            <slot  name="up"></slot>
+        <div v-show="!down" class="btn_div">
+            <slot name="up"></slot>
         </div>
     </div>
 </template>
 <style scoped>
+
+    .btn_div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 
 </style>
 
