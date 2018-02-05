@@ -1,9 +1,9 @@
 <template>
     <div @touchstart="touchstart" @touchend="touchend" style="user-select: none">
-        <div v-if="down" style="position: relative">
+        <div v-show="down" style="position: relative">
             <slot  name="down"></slot>
         </div>
-        <div v-if="!down" style="position: relative">
+        <div v-show="!down" style="position: relative">
             <slot  name="up"></slot>
         </div>
     </div>
